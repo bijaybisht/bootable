@@ -1,0 +1,2 @@
+KERNEL=="sd*", SUBSYSTEMS=="scsi", ATTRS{model}=="USB Flash Disk", NAME+="usb%n"
+KERNEL=="sd*", SUBSYSTEMS=="scsi", ATTRS{model}!="USB Flash Disk", NAME+="disk%n"
