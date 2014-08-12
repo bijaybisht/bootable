@@ -26,7 +26,7 @@ debug() {
 getoptions()
 {
 	 
-  while getopts d:i opt 2>/dev/null; do
+  while getopts ":d:i:" opt 2>/dev/null; do
     case $opt in
       d)
         DEV=$OPTARG
@@ -46,8 +46,6 @@ getoptions()
 }
 
 getoptions $@
-
-exit
 
 debug "Creating working directories"
 mkdir -p temp usb/extlinux usb/temp
